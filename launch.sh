@@ -1,4 +1,9 @@
-PORT=$1
+PORT=5000
 
-python server.py $PORT
-ngrok http $PORT
+if [ ! -z "$1" ]
+then
+  PORT=$1
+fi
+
+$TERM -e python server.py $PORT &
+$TERM -e ngrok http $PORT
