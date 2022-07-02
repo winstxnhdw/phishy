@@ -24,7 +24,7 @@ netlify env:set REDIRECTING_URL "<URL>"
 
 ## Known Issues
 
-If you receive the following error, please check if you are using an AdBlocker.
+If you receive the following error, please check if an AdBlocker is active.
 
 ```javascript
 TypeError: NetworkError when attempting to fetch resource.
