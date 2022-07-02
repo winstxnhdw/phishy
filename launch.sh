@@ -6,4 +6,4 @@ then
 fi
 
 $TERM -e python server.py $PORT &
-$TERM -e ngrok http $PORT
+$TERM -e ngrok http $PORT &
