@@ -14,7 +14,7 @@ Set the backend server URL as the `SERVER_URL` environment variable.
 
 ```bash
 netlify env:set SERVER_URL "<ngrok-URL>"
-``
+```
 
 ## Known Issues
 
