@@ -7,7 +7,7 @@
   <body>
     <script>
       ;(async () => {
-        console.log(process.env.SERVER_URL)
+        console.log(SERVER_URL)
         window.post = (url, data) => {
           return fetch(url, {
             method: 'POST',
