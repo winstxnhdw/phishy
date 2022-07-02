@@ -4,11 +4,23 @@ Super light and fast server backend for retrieving POST requests.
 
 ## Usage
 
-Preferably, use port 5000 or higher.
+Launch the backend server. Preferably, use port 5000 or higher.
 
 ```bash
 sh launch.sh <port>
 ```
+
+Expose the backend server to the internet.
+
+```bash
+ngrok http <port>
+```
+
+Set the backend server URL as the `SERVER_URL` environment variable.
+
+```bash
+netlify env:set SERVER_URL "<ngrok-URL>"
+``
 
 ## Known Issues
 
