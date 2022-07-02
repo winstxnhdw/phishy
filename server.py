@@ -23,7 +23,7 @@ def init_server():
         httpd.serve_forever()
 
     except KeyboardInterrupt:
-        pass
+        print("Manual exit detected.")
 
     finally:
         print("\nServer closing..")
