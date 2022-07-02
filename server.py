@@ -8,7 +8,8 @@ class Server(SimpleHTTPRequestHandler):
 
         content_length = int(self.headers['Content-Length'])
         post_data = self.rfile.read(content_length).decode('utf-8')
-        formatted_data = '\n'.join(line.strip() for line in dumps(loads(post_data), indent=2).lstrip('{').rstrip('}').split('\n'))
+        post_data_list = dumps(loads(post_data), indent=2).lstrip('{').rstrip('}').split('\n')
+        formatted_data = '\n'.join(line.strip() for line in post_data_list)
         print(f"\nPOST\n{self.headers}Body:\n{formatted_data}")
         self.send_response(200)
 
