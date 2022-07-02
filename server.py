@@ -19,15 +19,15 @@ def init_server():
     httpd = HTTPServer((host, port), Server)
 
     try:
-        print(f"Serving HTTP on {host} port {port} (http://{host}:{port}/)..")
         httpd.serve_forever()
+        print(f"Serving HTTP on {host} port {port} (http://{host}:{port}/)..")
 
     except KeyboardInterrupt:
         print("Manual exit detected.")
 
     finally:
-        print("\nServer closing..")
         httpd.server_close()
+        print("\nServer closing..")
 
 def parse_args():
 
