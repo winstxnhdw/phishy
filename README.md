@@ -16,6 +16,12 @@ Set the backend server URL as the `SERVER_URL` environment variable.
 netlify env:set SERVER_URL "<ngrok-URL>"
 ```
 
+You can also set a URL the visitor will be redirected to with the following.
+
+```bash
+netlify env:set REDIRECTING_URL "<URL>"
+```
+
 ## Known Issues
 
 If you receive the following error, please check if you are using an AdBlocker.
