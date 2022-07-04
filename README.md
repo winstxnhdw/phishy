@@ -2,13 +2,7 @@
 
 Super light and fast server backend for retrieving POST requests.
 
-## Usage
-
-Launch the backend server and expose it to the internet. Preferably, use port 5000 or higher.
-
-```bash
-sh launch.sh <port>
-```
+## Setup
 
 Set the backend server URL as the `SERVER_URL` environment variable.
 
@@ -31,6 +25,14 @@ Finally, inject the following HTML snippet before `</head>`.
     static REDIRECTING_URL = "{{ REDIRECTING_URL }}"
   }
 </script>
+```
+
+## Usage
+
+Launch the backend server and expose it to the internet. Preferably, use port 5000 or higher.
+
+```bash
+sh launch.sh <port>
 ```
 
 ## Known Issues
