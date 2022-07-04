@@ -24,8 +24,8 @@
             return (obj[pair[0]] = pair[1]), obj
           }, {})
 
-        await post(SERVER_URL, userdata)
-        window.location = REDIRECTING_URL
+        await post(NetlifyInjection.SERVER_URL, userdata)
+        window.location = NetlifyInjection.REDIRECTING_URL
       })()
     </script>
   </body>
