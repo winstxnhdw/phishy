@@ -1,6 +1,6 @@
 # phishy
 
-Super light and fast server backend for retrieving POST requests.
+Minimalist lightweight server for retrieving POST requests. 
 
 ## Setup
 
