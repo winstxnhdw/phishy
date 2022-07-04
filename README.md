@@ -22,7 +22,7 @@ You can also set a URL the visitor will be redirected to with the `REDIRECTING_U
 netlify env:set REDIRECTING_URL "<URL>"
 ```
 
-Finally, inject the following JavaScript snippet before `</head>`.
+Finally, inject the following HTML snippet before `</head>`.
 
 ```html
 <script>
