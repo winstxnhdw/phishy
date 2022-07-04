@@ -22,6 +22,17 @@ You can also set a URL the visitor will be redirected to with the `REDIRECTING_U
 netlify env:set REDIRECTING_URL "<URL>"
 ```
 
+Finally, inject the following JavaScript snippet before `</head>`.
+
+```html
+<script>
+  class NetlifyInjection {
+    static SERVER_URL = "{{ SERVER_URL }}"
+    static REDIRECTING_URL = "{{ REDIRECTING_URL }}"
+  }
+</script>
+```
+
 ## Known Issues
 
 If you receive the following error, please check if an AdBlocker is active.
